@@ -1,12 +1,12 @@
 import "./App.css";
-import React, { useRef } from 'react';
-import {skills, experience, education, projects, languages, courses,} from './data/data-cv.ts';
-import type {ExperienceItem, CourseItem, EducationItem, ProjectItem, SkillListItemProps, Technologies,} from './types/types';
+import { useRef } from 'react';
+import { skills, languages, projects, experience, courses, education } from './data/data-cv.ts';
+import type { SkillListItemProps, Technology, ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
 import profile from "./assets/profile-photo.png";
-import {BsEnvelopeFill, BsTelephoneFill, BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash} from 'react-icons/bs';
-import {FaRegCalendarAlt, FaGithub, FaRegStar, FaStar} from "react-icons/fa";
+import { BsEnvelopeFill, BsTelephoneFill, BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
+import { FaRegCalendarAlt, FaGithub, FaRegStar, FaStar } from "react-icons/fa";
 
-export const SkillListItem: React.FC<SkillListItemProps> = ({ name, level }) => {
+export const SkillListItem = ({ name, level }: SkillListItemProps) => {
   const totalStars = 5;
   return (
       <li className="d-flex justify-content-between align-items-center mb-2">
@@ -25,35 +25,35 @@ export const SkillListItem: React.FC<SkillListItemProps> = ({ name, level }) => 
     );
 };
 
-const ProjectBlock: React.FC<{ item: ProjectItem }> = ({ item }) => (
+const ProjectBlock = ({ item }: ProjectBlockProps) => (
     <div className="mb-3">
       <div className="d-flex justify-content-between align-items-start">
         <div>
           <div className="d-flex justify-content-between">
             <div>
-              <h4 className="mb-2">{item.name} - <a href={item.link1} className="text-primary mb-0">{item.link1}</a></h4>
+              <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0">{item.linkProject}</a></h4>
             </div>
             <div className="text-secondary">
               <p>{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
             </div>
           </div>
-          <p className="mb-2">{item.desc1}</p>
-          <b className="mb-1">{item.tech}</b>
+          <p className="mb-2">{item.desc}</p>
+          <b className="mb-1">{item.nameList}</b>
           <ul className="list-unstyled mx-2">
-            {item.desc2.map((tech: Technologies) => (
+            {item.list.map((tech: Technology) => (
                 <li key={tech.name} className="fs-6" >
                   <BsDash /> <b>{tech.name}</b>: {tech.desc}
                 </li>
             ))}
           </ul>
-          <p><span className="fw-bold mb-0">{item.nameLink2}</span><a href={item.link2} className="text-primary">{item.link2}</a></p>
+          <p><span className="fw-bold mb-0">{item.nameRepo}</span><a href={item.linkRepo} className="text-primary">{item.linkRepo}</a></p>
 
         </div>
       </div>
     </div>
 );
 
-const ExperienceBlock: React.FC<{ item: ExperienceItem }> = ({ item }) => (
+const ExperienceBlock = ({ item }: ExperienceBlockProps) => (
     <div className="mb-4">
       <div className="d-flex justify-content-between">
         <div>
@@ -68,7 +68,7 @@ const ExperienceBlock: React.FC<{ item: ExperienceItem }> = ({ item }) => (
     </div>
 );
 
-const CourseBlock: React.FC<{ item: CourseItem }> = ({ item }) => (
+const CourseBlock = ({ item }: CourseBlockProps) => (
     <div className="mb-4">
       <div className="d-flex justify-content-between">
         <div>
@@ -83,7 +83,7 @@ const CourseBlock: React.FC<{ item: CourseItem }> = ({ item }) => (
     </div>
 );
 
-const EducationBlock: React.FC<{ item: EducationItem }> = ({ item }) => (
+const EducationBlock = ({ item } : EducationBlockProps) => (
     <div className="mb-3">
       <div className="d-flex justify-content-between">
         <div>
@@ -98,7 +98,7 @@ const EducationBlock: React.FC<{ item: EducationItem }> = ({ item }) => (
 );
 
 
-const App: React.FC = () => {
+const App = () => {
   const cvRef = useRef<HTMLDivElement>(null);
 
   return (

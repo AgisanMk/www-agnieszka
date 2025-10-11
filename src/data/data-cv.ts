@@ -1,5 +1,4 @@
-import type {ExperienceItem, CourseItem, EducationItem, ProjectItem, Skill, Technologies} from "../types/types.ts";
-
+import type { ExperienceItem, CourseItem, EducationItem, ProjectItem, Skill, Technology } from "../types/types.ts";
 
 export const skills: Skill[] = [
     { name: 'HTML5, CSS', level: 3 },
@@ -18,7 +17,7 @@ export const languages = [
     'Polish - native',
 ];
 
-export const technologiesApi: Technologies[] = [
+export const technologiesApi: Technology[] = [
     { name: 'Languages', desc: 'HTML, JavaScript, TypeScript, C#, PHP' },
     { name: 'Frameworks & Libraries', desc: 'React + Vite, ASP.NET Web API, uuid' },
     { name: 'Styling', desc: 'CSS3, React Bootstrap' },
@@ -26,7 +25,7 @@ export const technologiesApi: Technologies[] = [
     { name: 'Other', desc: 'REST APIs, Responsive Design, React Context API & Reducers for state management, sessionStorage, React Router' },
 ]
 
-export const technologiesWebsite: Technologies[] = [
+export const technologiesWebsite: Technology[] = [
     { name: 'Languages', desc: 'HTML, JavaScript, TypeScript' },
     { name: 'Frameworks & Libraries', desc: 'React + Vite' },
     { name: 'Styling', desc: 'CSS3, React Bootstrap' },
@@ -36,25 +35,25 @@ export const technologiesWebsite: Technologies[] = [
 
 export const projects: ProjectItem[] = [
     {
-        name: 'API Time To Change',
-        link1: 'timetochange.work',
+        nameProject: 'API Time To Change',
+        linkProject: 'timetochange.work',
         period: '2025',
-        desc1: 'An interactive financial calculator that helps users assess whether their current financial situation aligns with their desired goals. The app aims to answer the question: Is it time to change jobs?',
-        tech: 'Technologies used:',
-        desc2: technologiesApi,
-        nameLink2: 'GitHub: ',
-        link2: 'github.com/agnieszkamk/timetochange'
+        desc: 'An interactive financial calculator that helps users assess whether their current financial situation aligns with their desired goals. The app aims to answer the question: Is it time to change jobs?',
+        nameList: 'Technologies used:',
+        list: technologiesApi,
+        nameRepo: 'GitHub: ',
+        linkRepo: 'github.com/agnieszkamk/timetochange'
     },
 
     {
-        name: 'Portfolio Website',
-        link1: 'agnieszka.makowej.pro',
+        nameProject: 'Portfolio Website',
+        linkProject: 'agnieszka.makowej.pro',
         period: '2025',
-        desc1: 'A personal resume website built using React + Vite, TypeScript, and Bootstrap with responsive design.',
-        tech: '',
-        desc2: technologiesWebsite,
-        nameLink2: 'GitHub: ',
-        link2: 'github.com/agnieszkamk/www-agnieszka'
+        desc: 'A personal resume website built using React + Vite, TypeScript, and Bootstrap with responsive design.',
+        nameList: '',
+        list: technologiesWebsite,
+        nameRepo: 'GitHub: ',
+        linkRepo: 'github.com/agnieszkamk/www-agnieszka'
     },
 ];
 
