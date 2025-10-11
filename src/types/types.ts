@@ -1,4 +1,4 @@
-// --- Projects ---
+// Projects
 
 export type ProjectBlockProps = {
     item: ProjectItem;
@@ -15,7 +15,7 @@ export interface ProjectItem {
     linkRepo?: string;
 }
 
-// --- Experience ---
+// Experience
 
 export type ExperienceBlockProps = {
     item: ExperienceItem;
@@ -28,7 +28,7 @@ export interface ExperienceItem {
     desc: string;
 }
 
-// --- Courses ---
+// Courses
 
 export type CourseBlockProps = {
     item: CourseItem;
@@ -41,7 +41,7 @@ export interface CourseItem {
     desc: string;
 }
 
-// --- Education---
+// Education
 
 export type EducationBlockProps = {
     item: EducationItem;
@@ -53,7 +53,7 @@ export interface EducationItem {
     period: string;
 }
 
-// --- Skills ---
+// Skills
 
 export type Skill = {
     name: string;
@@ -62,7 +62,7 @@ export type Skill = {
 
 export type SkillListItemProps = Skill;
 
-// --- Technologies ---
+// Technologies
 
 export type Technology = {
     name: string;
