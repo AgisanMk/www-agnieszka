@@ -1,12 +1,12 @@
 import "./App.css";
 import { useRef } from 'react';
-import { skills, languages, projects, experience, courses, education } from './data/data-cv.ts';
-import type { SkillListItemProps, Technology, ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
+import {skills, languages, projects, experience, courses, education} from './data/data-cv.ts';
+import type { TechStackListItemProps, Technology, ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
 import profile from "./assets/profile-photo.png";
 import { BsEnvelopeFill, BsTelephoneFill, BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
 import { FaRegCalendarAlt, FaGithub, FaRegStar, FaStar } from "react-icons/fa";
 
-export const SkillListItem = ({ name, level }: SkillListItemProps) => {
+export const TechStackListItem = ({ name, level }: TechStackListItemProps) => {
   const totalStars = 5;
   return (
       <li className="d-flex justify-content-between align-items-center mb-2">
@@ -155,11 +155,11 @@ const App = () => {
           </div>
 
           <div className="m-4">
-            <h3 className="d-flex align-items-center gap-2 mt-5">Key skills</h3>
+            <h3 className="d-flex align-items-center gap-2 mt-5">Tech Stack</h3>
             <hr className="mb-4 mt-0" />
             <ul className="list-unstyled mx-2">
               {skills.map((s) => (
-                  <SkillListItem key={s.name} name={s.name} level={s.level} />
+                  <TechStackListItem key={s.name} name={s.name} level={s.level} />
               ))}
             </ul>
           </div>

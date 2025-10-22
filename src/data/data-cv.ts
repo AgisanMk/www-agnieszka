@@ -1,6 +1,14 @@
-import type { ExperienceItem, CourseItem, EducationItem, ProjectItem, Skill, Technology } from "../types/types.ts";
+import type {
+    TechStack,
+    ExperienceItem,
+    CourseItem,
+    EducationItem,
+    ProjectItem,
+    Technology,
 
-export const skills: Skill[] = [
+} from "../types/types.ts";
+
+export const skills: TechStack[] = [
     { name: 'HTML5, CSS', level: 3 },
     { name: 'Bootstrap', level: 2 },
     { name: 'JavaScript', level: 3 },

@@ -53,14 +53,14 @@ export interface EducationItem {
     period: string;
 }
 
-// Skills
+// Tech Stack
 
-export type Skill = {
+export type TechStack = {
     name: string;
     level: number; // 0–5
 };
 
-export type SkillListItemProps = Skill;
+export type TechStackListItemProps = TechStack;
 
 // Technologies
 
