@@ -50,7 +50,7 @@ export const projects: ProjectItem[] = [
         nameList: 'Technologies used:',
         list: technologiesApi,
         nameRepo: 'GitHub: ',
-        linkRepo: 'github.com/agnieszkamk/timetochange'
+        linkRepo: 'github.com/AgisanMk/TimeToChange.php'
     },
 
     {
@@ -61,7 +61,7 @@ export const projects: ProjectItem[] = [
         nameList: '',
         list: technologiesWebsite,
         nameRepo: 'GitHub: ',
-        linkRepo: 'github.com/agnieszkamk/www-agnieszka'
+        linkRepo: 'github.com/AgisanMk/www-agnieszka'
     },
 ];
 

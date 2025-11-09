@@ -129,27 +129,27 @@ const App = () => {
 
             <p className="mb-1 d-flex align-items-center mx-3 gap-3">
               <BsHouseFill />
-              <a href="https://agnieszk.amakowej.pro" className="text-white text-decoration-none">
+              <a href="https://agnieszka.makowej.pro" className="text-white text-decoration-none">
                 agnieszka.makowej.pro
               </a>
             </p>
 
             <p className="mb-1 d-flex align-items-center mx-3 gap-3">
               <BsLinkedin />
-              <a href="https://linkedin.com/in/agnieskamk" className="text-white text-decoration-none">
-                linkedin.com/in/agnieszkamk
+              <a href="https://linkedin.com/in/agnieszkamk" className="text-white text-decoration-none">
+                linkedin.com/in/agnieszkamk/
               </a>
             </p>
 
             <p className="mb-1 d-flex align-items-center mx-3 gap-3">
               <FaGithub />
               <a
-                  href="https://github.com/agnieszkamk"
+                  href="https://github.com/AgisanMk"
                   className="text-white text-decoration-none"
                   target="_blank"
                   rel="noopener noreferrer"
               >
-                github.com/agnieszkamk
+                github.com/AgisanMk
               </a>
             </p>
           </div>
