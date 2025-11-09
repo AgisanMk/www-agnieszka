@@ -50,7 +50,7 @@ export const projects: ProjectItem[] = [
         nameList: 'Technologies used:',
         list: technologiesApi,
         nameRepo: 'GitHub: ',
-        linkRepo: 'github.com/AgisanMk/TimeToChange.php'
+        linkRepo: 'github.com/AgisanMk/TimeToChange.React'
     },
 
     {
