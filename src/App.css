@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sidebar-bg: #006699;
+  --content-bg: #f8f9fa;
+
+  --bs-primary: #006699;
+  --bs-primary-rgb: 0, 102, 153;
+}
+
+body {
+  margin: 0;
+  background: var(--content-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+.cv-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+  background: #e5e7eb;
+}
+
+.cv-container {
+  width: 210mm;
+  max-width: 100%;
+  aspect-ratio: 210 / 297;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar {
+  flex: 0 0 35%;
+  padding: 2rem;
+  background: var(--sidebar-bg);
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 2.5rem;
+  background: var(--content-bg);
+  overflow: auto;
+}
+
+@media (max-width: 991.98px) {
+  .cv-container {
+    width: 100%;
+    aspect-ratio: auto;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: none;
+  }
+}
+
+.profile-photo {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+li {
+  font-size: 0.95rem;
+}
+
+li span:last-child svg {
+  margin-left: 2px;
+}
