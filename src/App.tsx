@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import {skills, languages, projects, experience, courses, education} from './data/data-cv.ts';
 import type { TechStackListItemProps, Technology, ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
 import profile from "./assets/profile-photo.png";
-import { BsEnvelopeFill, BsTelephoneFill, BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
+import { BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
 import { FaRegCalendarAlt, FaGithub, FaRegStar, FaStar } from "react-icons/fa";
 
 export const TechStackListItem = ({ name, level }: TechStackListItemProps) => {
@@ -116,15 +116,7 @@ const App = () => {
             <hr className="mb-4 mt-0" />
 
             <p className="mb-1 d-flex align-items-center mx-3 gap-3">
-              <BsGeoAltFill /> <span>Tarnów, Poland</span>
-            </p>
-
-            <p className="mb-1 d-flex align-items-center mx-3 gap-3">
-              <BsTelephoneFill /> <span>+48 600 147 188</span>
-            </p>
-
-            <p className="mb-1 d-flex align-items-center mx-3 gap-3">
-              <BsEnvelopeFill /> <span>agnieszka@makowej.pro</span>
+              <BsGeoAltFill /> <span>Poland</span>
             </p>
 
             <p className="mb-1 d-flex align-items-center mx-3 gap-3">

@@ -68,13 +68,13 @@ export const projects: ProjectItem[] = [
 export const experience: ExperienceItem[] = [
     {
         role: 'Software Developer',
-        company: 'Polish Developer Network sp. z o.o. - apprenticeship',
+        company: 'Polish Developer Network sp. z o.o.',
         period: '2025 - present',
         desc: 'Implementation of two projects as part of the internship: the Time To Change application - an interactive financial calculator and Portfolio (online CV).',
     },
     {
         role: 'Office Administrator',
-        company: 'Polish Developer Network sp. z o.o. - contract',
+        company: 'Polish Developer Network sp. z o.o.',
         period: '2019 - 2024',
         desc: 'Office document management and digital archiving. Invoicing and preparation of accounting documents, cooperation with an accounting office. Planning and monitoring of the operating budget and making company payments.',
     },
@@ -92,7 +92,7 @@ export const experience: ExperienceItem[] = [
     },
     {
         role: 'Office Assistant',
-        company: 'EXLAB',
+        company: 'Exlab',
         period: '2007 - 2009',
         desc: 'Assistance with daily office tasks. Maintaining the aesthetics and functionality of the office.',
     },
