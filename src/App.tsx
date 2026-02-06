@@ -46,8 +46,10 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
                 </li>
             ))}
           </ul>
-          <p><span className="fw-bold mb-0">{item.nameRepo}</span><a href={item.linkRepo} className="text-primary">{item.linkRepo}</a></p>
-
+          <p><span className="fw-bold mb-0">{item.nameRepo}</span></p>
+          <p><a href={item.linkRepo1} className="text-primary">{item.linkRepo1}</a></p>
+          <p><a href={item.linkRepo2} className="text-primary">{item.linkRepo2}</a></p>
+          <p><a href={item.linkRepo3} className="text-primary">{item.linkRepo3}</a></p>
         </div>
       </div>
     </div>
@@ -103,7 +105,7 @@ const App = () => {
 
   return (
       <div ref={cvRef} className="cv-wrapper d-flex flex-column flex-lg-row">
-        <aside className="sidebar p-4 text-white">
+        <aside className="sidebar text-white">
 
           <div className="text-center align-content-center align-items-center mb-4">
             <img src={profile} alt="profile" className="profile-photo" />
@@ -167,7 +169,7 @@ const App = () => {
           </div>
         </aside>
 
-        <main className="content flex-grow-1 p-5">
+        <main className="content flex-grow-1">
           <section className="fs-5 fst-italic text-center">
             <p>
               I'm a beginner frontend developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.

@@ -22,24 +22,12 @@ body {
 }
 
 .cv-wrapper {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 2rem;
   background: #e5e7eb;
-}
-
-.cv-container {
-  width: 210mm;
-  max-width: 100%;
-  aspect-ratio: 210 / 297;
-  background: white;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar {
@@ -53,23 +41,12 @@ body {
   flex: 1;
   padding: 2.5rem;
   background: var(--content-bg);
-  overflow: auto;
-}
-
-@media (max-width: 991.98px) {
-  .cv-container {
-    width: 100%;
-    aspect-ratio: auto;
-    flex-direction: column;
-  }
-
-  .sidebar {
-    flex: none;
-  }
+  overflow: visible;
 }
 
 .profile-photo {
   height: 200px;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -80,4 +57,56 @@ li {
 
 li span:last-child svg {
   margin-left: 2px;
+}
+
+@media (max-width: 991.98px) {
+  .cv-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .profile-photo {
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sidebar,
+  .content {
+    padding: 1rem;
+  }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+
+  li {
+    font-size: 0.9rem;
+  }
+}
+
+@media print {
+  .cv-wrapper {
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none;
+  }
 }
