@@ -12,7 +12,9 @@ export interface ProjectItem {
     nameList: string;
     list: Technology[];
     nameRepo: string;
-    linkRepo?: string;
+    linkRepo1?: string;
+    linkRepo2?: string;
+    linkRepo3?: string;
 }
 
 // Experience
