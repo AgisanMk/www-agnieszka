@@ -44,26 +44,26 @@ export const technologiesWebsite: Technology[] = [
 export const projects: ProjectItem[] = [
     {
         nameProject: 'API Time To Change',
-        linkProject: 'timetochange.work',
+        linkProject: 'https://timetochange.work',
         period: '2025',
         desc: 'An interactive financial calculator that helps users assess whether their current financial situation aligns with their desired goals. The app aims to answer the question: Is it time to change jobs?',
         nameList: 'Technologies used:',
         list: technologiesApi,
         nameRepo: 'GitHub: ',
-        linkRepo1: 'github.com/AgisanMk/TimeToChange.React',
-        linkRepo2: 'github.com/AgisanMk/TimeToChange.Net',
-        linkRepo3: 'github.com/AgisanMk/TimeToChange.php',
+        linkRepo1: 'https://github.com/AgisanMk/TimeToChange.React',
+        linkRepo2: 'https://github.com/AgisanMk/TimeToChange.Net',
+        linkRepo3: 'https://github.com/AgisanMk/TimeToChange.php',
     },
 
     {
         nameProject: 'Portfolio Website',
-        linkProject: 'agnieszka.makowej.pro',
+        linkProject: 'https://agnieszka.makowej.pro',
         period: '2025',
         desc: 'A personal resume website built using React + Vite, TypeScript, and Bootstrap with responsive design.',
         nameList: '',
         list: technologiesWebsite,
         nameRepo: 'GitHub: ',
-        linkRepo1: 'github.com/AgisanMk/www-agnieszka'
+        linkRepo1: 'https://github.com/AgisanMk/www-agnieszka'
     },
 ];
 
