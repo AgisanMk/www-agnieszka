@@ -31,7 +31,7 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
         <div>
           <div className="d-flex justify-content-between">
             <div>
-              <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0">{item.linkProject}</a></h4>
+              <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0" target="_blank" rel="noopener noreferrer">{item.linkProject}</a></h4>
             </div>
             <div className="text-secondary">
               <p>{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
@@ -47,9 +47,9 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
             ))}
           </ul>
           <p><span className="fw-bold mb-0">{item.nameRepo}</span></p>
-          <p><a href={item.linkRepo1} className="text-primary">{item.linkRepo1}</a></p>
-          <p><a href={item.linkRepo2} className="text-primary">{item.linkRepo2}</a></p>
-          <p><a href={item.linkRepo3} className="text-primary">{item.linkRepo3}</a></p>
+          <p><a href= {item.linkRepo1} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo1}</a></p>
+          <p><a href= {item.linkRepo2} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo2}</a></p>
+          <p><a href= {item.linkRepo3} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo3}</a></p>
         </div>
       </div>
     </div>
