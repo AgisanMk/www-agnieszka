@@ -170,10 +170,10 @@ const App = () => {
         </aside>
 
         <main className="content flex-grow-1">
-          <section className="fs-5 fst-italic text-center">
-            <h3 className="mt-5">Summary</h3>
+          <section className="text-center">
+            <h3>Summary</h3>
             <hr className="mb-4 mt-0" />
-            <p>
+            <p className="fs-5 fst-italic">
               I'm a beginner software developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
             </p>
             <p>
@@ -190,7 +190,7 @@ const App = () => {
           </section>
 
           <section className="mb-5">
-            <h3 className="mt-5">Experience</h3>
+            <h3 className="mt-5">Work Experience</h3>
             <hr className="mb-4 mt-0" />
             {experience.map((e, i) => (
                 <ExperienceBlock key={i} item={e} />
