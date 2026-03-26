@@ -110,7 +110,7 @@ const App = () => {
           <div className="text-center align-content-center align-items-center mb-4">
             <img src={profile} alt="profile" className="profile-photo" />
             <h2 className="mb-1">Agnieszka Makowej</h2>
-            <h5><i>Junior Frontend Developer</i></h5>
+            <h5><i>Software Developer</i></h5>
           </div>
 
           <div className="m-4">
@@ -171,8 +171,10 @@ const App = () => {
 
         <main className="content flex-grow-1">
           <section className="fs-5 fst-italic text-center">
+            <h3 className="mt-5">Summary</h3>
+            <hr className="mb-4 mt-0" />
             <p>
-              I'm a beginner frontend developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
+              I'm a beginner software developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
             </p>
             <p>
               I'm looking for my first commercial role to grow within a team, gradually expand my skills and create real value for users.

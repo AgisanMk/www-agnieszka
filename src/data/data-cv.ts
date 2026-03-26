@@ -95,7 +95,7 @@ export const experience: ExperienceItem[] = [
     {
         role: 'Office Assistant',
         company: 'Exlab',
-        period: '2007 - 2009',
+        period: '2008 - 2009',
         desc: 'Assistance with daily office tasks. Maintaining the aesthetics and functionality of the office.',
     },
 
