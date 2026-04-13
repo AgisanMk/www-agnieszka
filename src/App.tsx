@@ -174,7 +174,7 @@ const App = () => {
             <h3>Summary</h3>
             <hr className="mb-4 mt-0" />
             <p className="fs-5 fst-italic">
-              I'm a beginner software developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
+              I'm a software developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
             </p>
             <p className="fs-5 fst-italic">
               I'm looking for my first commercial role to grow within a team, gradually expand my skills and create real value for users.

@@ -43,7 +43,7 @@ export const technologiesWebsite: Technology[] = [
 
 export const projects: ProjectItem[] = [
     {
-        nameProject: 'API Time To Change',
+        nameProject: 'Time To Change',
         linkProject: 'https://timetochange.work',
         period: '2025',
         desc: 'An interactive financial calculator that helps users assess whether their current financial situation aligns with their desired goals. The app aims to answer the question: Is it time to change jobs?',
@@ -102,6 +102,12 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const courses: CourseItem[] = [
+    {
+        name: 'Programming Foundations: Object-Oriented Design',
+        company: 'LinkedIn Learning',
+        period: '03/2026',
+        desc: '',
+    },
     {
         name: 'Sekurak about security',
         company: 'Sekurak.pl',
