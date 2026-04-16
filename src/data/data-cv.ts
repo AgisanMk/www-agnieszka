@@ -97,31 +97,38 @@ export const experience: ExperienceItem[] = [
         role: 'Software Developer',
         company: 'Polish Developer Network sp. z o.o.',
         period: 'Jun 2025 - present',
-        desc: 'Implementation of two projects as part of the internship: the Time To Change application - an interactive financial calculator and Portfolio (online CV).',
+        desc: 'Developed full-stack web applications as part of internship projects' +
+            'Built and maintained frontend using React and TypeScript' +
+            'Integrated frontend with backend services using REST API' +
+            'Collaborated on application architecture and feature implementation',
     },
     {
         role: 'Office Administrator',
         company: 'Polish Developer Network sp. z o.o.',
         period: 'Dec 2019 - Dec 2024',
-        desc: 'Office document management and digital archiving. Invoicing and preparation of accounting documents, cooperation with an accounting office. Planning and monitoring of the operating budget and making company payments.',
+        desc: 'Managed digital documentation and data processing workflows' +
+            'Maintained structured document archives and records' +
+            'Prepared invoices and accounting documentation' +
+            'Coordinated with accounting office and managed payments' +
+            'Monitored operational budget and financial processes',
     },
     {
-        role: 'Freelance',
+        role: 'Freelance Administrative Services',
         company: 'ALM Agnieszka Makowej',
         period: '2017 - present',
-        desc: 'Maintaining office documentation with a wide range of secretarial and administrative duties.',
+        desc: 'Managed office documentation and administrative processes. Organized and maintained structured data and records',
     },
     {
         role: '',
         company: 'IntelArt',
         period: '2009 - 2012',
-        desc: 'Handling office documents, proper archiving and storage.',
+        desc: 'Handling office documents, archiving and storage',
     },
     {
         role: 'Office Assistant',
         company: 'Exlab',
         period: '2008 - 2009',
-        desc: 'Assistance with daily office tasks. Maintaining the aesthetics and functionality of the office.',
+        desc: 'Supported daily office operations and administrative tasks. Maintained organization and functionality of office environment',
     },
 
 ];
