@@ -72,9 +72,12 @@ li span:last-child svg {
     text-align: center;
   }
 
-  .sidebar ul {
+  .sidebar ul li {
     text-align: left;
+    font-size: 0.95rem;
   }
+
+
 
   .content {
     width: 100%;
