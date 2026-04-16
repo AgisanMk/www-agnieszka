@@ -3,7 +3,6 @@ import type {
     CourseItem,
     EducationItem,
     ProjectItem,
-    DescProject, DescWebsite,
     TechSkill,
 
 } from "../types/types.ts";
@@ -51,19 +50,19 @@ export const languages = [
     'Polish - native',
 ];
 
-export const descProjects: DescProject[] = [
-    {desc: 'Developed a financial calculator application using React, TypeScript, and ASP.NET Web API'},
-    {desc: 'Built and integrated REST API for financial data processing'},
-    {desc: 'Implemented state management using React Context API and reducers'},
-    {desc: 'Designed responsive user interface with Bootstrap'},
-    {desc: 'Implemented client-side data persistence using sessionStorage'},
-    {desc: 'Created separate frontend and backend repositories'},
+export const descProjects: string[] = [
+    'Developed a financial calculator application using React, TypeScript, and ASP.NET Web API',
+    'Built and integrated REST API for financial data processing',
+    'Implemented state management using React Context API and reducers',
+    'Designed responsive user interface with Bootstrap',
+    'Implemented client-side data persistence using sessionStorage',
+    'Created separate frontend and backend repositories',
 ]
 
-export const descWebsites: DescWebsite[] = [
-    {desc: 'Developed personal portfolio website using React, TypeScript, and Vite'},
-    {desc: 'Designed responsive layout with Bootstrap'},
-    {desc: 'Implemented modern frontend structure and routing'},
+export const descWebsites: string[] = [
+    'Developed personal portfolio website using React, TypeScript, and Vite',
+    'Designed responsive layout with Bootstrap',
+    'Implemented modern frontend structure and routing',
 ]
 
 export const projects: ProjectItem[] = [
@@ -92,78 +91,113 @@ export const projects: ProjectItem[] = [
     },
 ];
 
+export const descSoftwareDeveloperPDN: string[] = [
+    'Developed full-stack web applications as part of internship projects',
+    'Built and maintained frontend using React and TypeScript',
+    'Integrated frontend with backend services using REST API',
+    'Collaborated on application architecture and feature implementation',
+]
+
+export const descOfficeAdministratorALM: string[] = [
+    'Managed digital documentation and data processing workflows',
+    'Maintained structured document archives and records',
+    'Prepared invoices and accounting documentation',
+    'Coordinated with accounting office and managed payments',
+    'Monitored operational budget and financial processes',
+]
+
+export const descFreelanceALM: string[] = [
+    'Managed office documentation and administrative processes',
+    'Organized and maintained structured data and records',
+]
+
+export const descIntelArt: string[] = [
+    'Handling office documents, archiving and storage',
+]
+
+export const descExlab: string[] = [
+    'Supported daily office operations and administrative tasks',
+    'Maintained organization and functionality of office environmen',
+]
 export const experience: ExperienceItem[] = [
     {
         role: 'Software Developer',
         company: 'Polish Developer Network sp. z o.o.',
         period: 'Jun 2025 - present',
-        desc: 'Developed full-stack web applications as part of internship projects' +
-            'Built and maintained frontend using React and TypeScript' +
-            'Integrated frontend with backend services using REST API' +
-            'Collaborated on application architecture and feature implementation',
+        desc: descSoftwareDeveloperPDN,
     },
     {
         role: 'Office Administrator',
         company: 'Polish Developer Network sp. z o.o.',
         period: 'Dec 2019 - Dec 2024',
-        desc: 'Managed digital documentation and data processing workflows' +
-            'Maintained structured document archives and records' +
-            'Prepared invoices and accounting documentation' +
-            'Coordinated with accounting office and managed payments' +
-            'Monitored operational budget and financial processes',
+        desc: descOfficeAdministratorALM,
     },
     {
         role: 'Freelance Administrative Services',
         company: 'ALM Agnieszka Makowej',
         period: '2017 - present',
-        desc: 'Managed office documentation and administrative processes. Organized and maintained structured data and records',
+        desc: descFreelanceALM,
     },
     {
         role: '',
         company: 'IntelArt',
         period: '2009 - 2012',
-        desc: 'Handling office documents, archiving and storage',
+        desc: descIntelArt,
     },
     {
         role: 'Office Assistant',
         company: 'Exlab',
         period: '2008 - 2009',
-        desc: 'Supported daily office operations and administrative tasks. Maintained organization and functionality of office environment',
+        desc: descExlab,
     },
 
 ];
+
+export const descSekurak: string[] = [
+    'Phishing and password security',
+    'OSINT and information gathering',
+    'Ransomware threats and prevention',
+    'Two-factor authentication',
+]
+
+export const descITKCP: string[] = [
+    'Information security and cryptography',
+    'Programming fundamentals',
+    'Databases and data engineering',
+    'Project management',
+]
 
 export const courses: CourseItem[] = [
     {
         name: 'Programming Foundations: Object-Oriented Design',
         company: 'LinkedIn Learning',
         period: 'Mar 2026',
-        desc: '',
+        desc: [],
     },
     {
         name: 'Sekurak about security',
         company: 'Sekurak.pl',
         period: 'Sep 2025',
-        desc: 'Key topics: basics of phishing defense, password leaks and security, the dark side of artificial intelligence and leaks, OSINT - information mining, two-factor authentication (2FA), smartphone security, the threat of ransomware.',
+        desc: descSekurak,
     },
     {
         name: 'Programming Foundations: Beyond the Fundamentals',
         company: 'LinkedIn Learning',
         period: 'Jul 2024',
-        desc: 'Key topics: collections, iteration, using external code, working with strings, planning a program, input and output, debugging, object orientation.',
+        desc: [],
     },
     {
         name: 'HTML for Programmers',
         company: 'LinkedIn Learning',
         period: 'Jun 2024',
-        desc: 'Key topics: HTML foundations, scaffolding an HTML Page, HTML with CSS and JavaScript.',
+        desc: [],
     },
     {
         name: 'Information Technologies Key Competencies Programme',
         company: 'European Information Technologies Certification Institute, ASBL.',
         period: 'Jan 2022',
-        desc: 'Key topics: fundamentals of Information security and cryptography, computer programming, Computer-aided project management, databases and data engineering, office software.',
-    },
+        desc: descITKCP,
+    }
 ];
 
 export const education: EducationItem[] = [

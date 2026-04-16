@@ -21,13 +21,13 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
         <div>
           <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0" target="_blank" rel="noopener noreferrer">{item.linkProject}</a></h4>
           <p className="mb-2">{item.desc}</p>
-          <ol className="list-unstyled mx-2">
-            {item.descList.map((el: { desc: string }, index: number) => (
-                <li key={`${el.desc}-${index}`} className="fs-6">
-                  <BsDot /> {el.desc}
+          <ul className="list-unstyled mx-2">
+            {item.descList.map((text, index) => (
+                <li key={index} className="fs-6">
+                  <BsDot /> {text}
                 </li>
             ))}
-          </ol>
+          </ul>
           <p><span className="fw-bold mb-0">{item.nameRepo}</span></p>
           {item.linkRepo1 && (<p><a href= {item.linkRepo1} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo1}</a></p>)}
           {item.linkRepo2 && (<p><a href= {item.linkRepo2} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo2}</a></p>)}
@@ -42,7 +42,13 @@ const ExperienceBlock = ({ item }: ExperienceBlockProps) => (
       <h4 className="mb-1">{item.role}</h4>
       <b className="mb-0 text-primary">{item.company}</b>
       <p className="text-secondary">{item.period}</p>
-      <p className="mt-1 mb-0">{item.desc}</p>
+      <ul className="list-unstyled mx-2">
+        {item.desc.map((text, index) => (
+            <li key={index} className="fs-6">
+              <BsDot /> {text}
+            </li>
+        ))}
+      </ul>
     </div>
 );
 
@@ -51,7 +57,13 @@ const CourseBlock = ({ item }: CourseBlockProps) => (
       <h4 className="mb-1">{item.name}</h4>
       <b className="mb-0 text-primary">{item.company}</b>
       <p className="text-secondary">{item.period}</p>
-      <p className="mt-1 mb-0">{item.desc}</p>
+      <ul className="list-unstyled mx-2">
+        {item.desc.map((text, index) => (
+            <li key={index} className="fs-6">
+              <BsDot /> {text}
+            </li>
+        ))}
+      </ul>
     </div>
 );
 

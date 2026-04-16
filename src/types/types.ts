@@ -8,21 +8,13 @@ export interface ProjectItem {
     nameProject: string;
     linkProject?: string;
     desc: string;
-    descList: DescProject[] | DescWebsite[];
-    tech: 'Technologies:',
+    descList: string[];
+    tech: string,
     descTech: string;
     nameRepo: string;
     linkRepo1?: string;
     linkRepo2?: string;
     linkRepo3?: string;
-}
-
-export interface DescProject {
-    desc: string;
-}
-
-export interface DescWebsite {
-    desc: string;
 }
 
 // Experience
@@ -35,7 +27,7 @@ export interface ExperienceItem {
     role: string;
     company: string;
     period: string;
-    desc: string;
+    desc: string[]
 }
 
 // Courses
@@ -48,7 +40,7 @@ export interface CourseItem {
     name: string;
     company: string;
     period: string;
-    desc: string;
+    desc: string[]
 }
 
 // Education
@@ -68,7 +60,6 @@ export interface EducationItem {
 export type TechSkill = {
     name: string;
 };
-
 
 
 
