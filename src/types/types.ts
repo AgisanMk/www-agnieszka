@@ -9,12 +9,21 @@ export interface ProjectItem {
     linkProject?: string;
     period: string;
     desc: string;
-    nameList: string;
-    list: Technology[];
+    descList: DescProject[] | DescWebsite[];
+    tech: 'Technologies:',
+    descTech: string;
     nameRepo: string;
     linkRepo1?: string;
     linkRepo2?: string;
     linkRepo3?: string;
+}
+
+export interface DescProject {
+    desc: string;
+}
+
+export interface DescWebsite {
+    desc: string;
 }
 
 // Experience
@@ -55,19 +64,14 @@ export interface EducationItem {
     period: string;
 }
 
-// Tech Stack
+// Technical Skills
 
-export type TechStack = {
+export type TechSkill = {
     name: string;
-    level: number; // 0–5
 };
 
-export type TechStackListItemProps = TechStack;
 
-// Technologies
 
-export type Technology = {
-    name: string;
-    desc: string; // 0–5
-};
+
+
 

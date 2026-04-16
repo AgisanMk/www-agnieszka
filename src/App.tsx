@@ -1,55 +1,38 @@
 import "./App.css";
 import { useRef } from 'react';
-import {skills, languages, projects, experience, courses, education} from './data/data-cv.ts';
-import type { TechStackListItemProps, Technology, ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
+import {
+  languages,
+  projects,
+  experience,
+  courses,
+  education,
+  programmingLanguages,
+  frameworks, backend, tools, other
+} from './data/data-cv.ts';
+import type { ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
 import profile from "./assets/profile-photo.png";
 import { BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
-import { FaRegCalendarAlt, FaGithub, FaRegStar, FaStar } from "react-icons/fa";
+import { FaGithub} from "react-icons/fa";
 
-export const TechStackListItem = ({ name, level }: TechStackListItemProps) => {
-  const totalStars = 5;
-  return (
-      <li className="d-flex justify-content-between align-items-center mb-2">
-        <div className="d-flex align-items-center gap-1">
-          <span className="fs-5">{name}</span>
-        </div>
-        <div> {[...Array(totalStars)].map((_, i) =>
-            i < level ? (
-                <FaStar key={i} color="#e5a948" className="fs-4"/>
-            ) : (
-                <FaRegStar key={i} color="gray" className="fs-4"/>
-            )
-        )}
-        </div>
-      </li>
-    );
-};
 
 const ProjectBlock = ({ item }: ProjectBlockProps) => (
     <div className="mb-3">
       <div className="d-flex justify-content-between align-items-start">
         <div>
-          <div className="d-flex justify-content-between">
-            <div>
-              <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0" target="_blank" rel="noopener noreferrer">{item.linkProject}</a></h4>
-            </div>
-            <div className="text-secondary">
-              <p>{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
-            </div>
-          </div>
+          <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0" target="_blank" rel="noopener noreferrer">{item.linkProject}</a></h4>
+          <p className="text-secondary">{item.period}</p>
           <p className="mb-2">{item.desc}</p>
-          <b className="mb-1">{item.nameList}</b>
-          <ul className="list-unstyled mx-2">
-            {item.list.map((tech: Technology) => (
-                <li key={tech.name} className="fs-6" >
-                  <BsDash /> <b>{tech.name}</b>: {tech.desc}
+          <ol className="list-unstyled mx-2">
+            {item.descList.map((el: { desc: string }, index: number) => (
+                <li key={`${el.desc}-${index}`} className="fs-6">
+                  <BsDash /> <b>{el.desc}</b>: {el.desc}
                 </li>
             ))}
-          </ul>
+          </ol>
           <p><span className="fw-bold mb-0">{item.nameRepo}</span></p>
-          <p><a href= {item.linkRepo1} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo1}</a></p>
-          <p><a href= {item.linkRepo2} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo2}</a></p>
-          <p><a href= {item.linkRepo3} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo3}</a></p>
+          {item.linkRepo1 && (<p><a href= {item.linkRepo1} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo1}</a></p>)}
+          {item.linkRepo2 && (<p><a href= {item.linkRepo2} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo2}</a></p>)}
+          {item.linkRepo3 && (<p><a href= {item.linkRepo3} className="text-primary" target="_blank" rel="noopener noreferrer">{item.linkRepo3}</a></p>)}
         </div>
       </div>
     </div>
@@ -57,45 +40,27 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
 
 const ExperienceBlock = ({ item }: ExperienceBlockProps) => (
     <div className="mb-4">
-      <div className="d-flex justify-content-between">
-        <div>
-          <h4 className="mb-1">{item.role}</h4>
-          <b className="mb-0 text-primary">{item.company}</b>
-        </div>
-        <div className="text-end">
-          <p className="text-secondary">{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
-        </div>
-      </div>
+      <h4 className="mb-1">{item.role}</h4>
+      <b className="mb-0 text-primary">{item.company}</b>
+      <p className="text-secondary">{item.period}</p>
       <p className="mt-1 mb-0">{item.desc}</p>
     </div>
 );
 
 const CourseBlock = ({ item }: CourseBlockProps) => (
     <div className="mb-4">
-      <div className="d-flex justify-content-between">
-        <div>
-          <h4 className="mb-1">{item.name}</h4>
-          <b className="mb-0 text-primary">{item.company}</b>
-        </div>
-        <div className="text-end">
-          <p className="text-secondary">{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
-        </div>
-      </div>
+      <h4 className="mb-1">{item.name}</h4>
+      <b className="mb-0 text-primary">{item.company}</b>
+      <p className="text-secondary">{item.period}</p>
       <p className="mt-1 mb-0">{item.desc}</p>
     </div>
 );
 
 const EducationBlock = ({ item } : EducationBlockProps) => (
-    <div className="mb-3">
-      <div className="d-flex justify-content-between">
-        <div>
-          <h4 className="mb-1">{item.degree}</h4>
-          <b className="mb-0 text-primary">{item.school}</b>
-        </div>
-        <div className="text-end">
-          <p className="text-secondary">{item.period}<FaRegCalendarAlt className="ms-3 mb-2"/></p>
-        </div>
-      </div>
+    <div className="mb-4">
+      <h4 className="mb-1">{item.degree}</h4>
+      <b className="mb-0 text-primary">{item.school}</b>
+      <p className="text-secondary">{item.period}</p>
     </div>
 );
 
@@ -110,7 +75,7 @@ const App = () => {
           <div className="text-center align-content-center align-items-center mb-4">
             <img src={profile} alt="profile" className="profile-photo" />
             <h2 className="mb-1">Agnieszka Makowej</h2>
-            <h5><i>Software Developer</i></h5>
+            <h5><i>Junior Software Developer</i></h5>
           </div>
 
           <div className="m-4">
@@ -149,11 +114,36 @@ const App = () => {
           </div>
 
           <div className="m-4">
-            <h3 className="d-flex align-items-center gap-2 mt-5">Tech Stack</h3>
+            <h3 className="d-flex align-items-center gap-2 mt-5">Technical Skills</h3>
             <hr className="mb-4 mt-0" />
+            <h3>Languages</h3>
             <ul className="list-unstyled mx-2">
-              {skills.map((s) => (
-                  <TechStackListItem key={s.name} name={s.name} level={s.level} />
+              {programmingLanguages.map((s) => (
+                  <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
+              ))}
+            </ul>
+            <h3>Frameworks & Libraries:</h3>
+            <ul className="list-unstyled mx-2">
+              {frameworks.map((s) => (
+                  <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
+              ))}
+            </ul>
+            <h3>Backend & APIs:</h3>
+            <ul className="list-unstyled mx-2">
+              {backend.map((s) => (
+                  <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
+              ))}
+            </ul>
+            <h3>Tools & Platforms:</h3>
+            <ul className="list-unstyled mx-2">
+              {tools.map((s) => (
+                  <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
+              ))}
+            </ul>
+            <h3>Other:</h3>
+            <ul className="list-unstyled mx-2">
+              {other.map((s) => (
+                  <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
               ))}
             </ul>
           </div>
@@ -174,10 +164,14 @@ const App = () => {
             <h3>Summary</h3>
             <hr className="mb-4 mt-0" />
             <p className="fs-5 fst-italic">
-              I'm a software developer motivated to learn and develop through hands-on projects. I&nbsp;work with React, TypeScript, and Vite, and I'm also learning about backend integration based on ASP.NET Web API and PHP.
+              Junior Software Developer specializing in React, TypeScript, and REST API integration.
             </p>
             <p className="fs-5 fst-italic">
-              I'm looking for my first commercial role to grow within a team, gradually expand my skills and create real value for users.
+              Experience in building full-stack web applications using React and ASP.NET Web API. Skilled in developing responsive user interfaces, managing
+              application state, and integrating frontend with backend services.
+            </p>
+            <p className="fs-5 fst-italic">
+              Motivated to grow within a development team and continuously expand technical expertise.
             </p>
           </section>
 
@@ -198,18 +192,18 @@ const App = () => {
           </section>
 
           <section className="mb-5">
-            <h3 className="mt-5">Courses</h3>
-            <hr className="mb-4 mt-0" />
-            {courses.map((e, i) => (
-                <CourseBlock key={i} item={e} />
-            ))}
-          </section>
-
-          <section className="mb-5">
             <h3 className="mt-5">Education</h3>
             <hr className="mb-4 mt-0" />
             {education.map((e, i) => (
                 <EducationBlock key={i} item={e} />
+            ))}
+          </section>
+
+          <section className="mb-5">
+            <h3 className="mt-5">Courses & Certifications</h3>
+            <hr className="mb-4 mt-0" />
+            {courses.map((e, i) => (
+                <CourseBlock key={i} item={e} />
             ))}
           </section>
 
