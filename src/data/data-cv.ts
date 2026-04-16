@@ -33,7 +33,6 @@ export const tools: TechSkill[] = [
     { name: 'Postman'},
     { name: 'Rider'},
     { name: 'WebStorm'},
-    { name: 'PHPStorm'},
 ];
 
 export const other: TechSkill[] = [
