@@ -69,7 +69,7 @@ export const descWebsites: DescWebsite[] = [
 export const projects: ProjectItem[] = [
     {
         nameProject: 'Time To Change – Financial Calculator Application',
-        linkProject: 'https://timetochange.work',
+        linkProject: 'timetochange.work',
         period: '2025',
         desc: 'Full-stack web application:',
         descList: descProjects,
@@ -83,7 +83,7 @@ export const projects: ProjectItem[] = [
 
     {
         nameProject: 'Portfolio Website',
-        linkProject: 'https://agnieszka.makowej.pro',
+        linkProject: 'agnieszka.makowej.pro',
         period: '2025',
         desc: '',
         descList: descWebsites,

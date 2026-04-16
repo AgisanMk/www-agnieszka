@@ -11,7 +11,7 @@ import {
 } from './data/data-cv.ts';
 import type { ProjectBlockProps, ExperienceBlockProps, CourseBlockProps, EducationBlockProps } from './types/types';
 import profile from "./assets/profile-photo.png";
-import { BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot, BsDash } from 'react-icons/bs';
+import { BsLinkedin, BsGeoAltFill, BsHouseFill, BsDot } from 'react-icons/bs';
 import { FaGithub} from "react-icons/fa";
 
 
@@ -20,12 +20,11 @@ const ProjectBlock = ({ item }: ProjectBlockProps) => (
       <div className="d-flex justify-content-between align-items-start">
         <div>
           <h4 className="mb-2">{item.nameProject} - <a href={item.linkProject} className="text-primary mb-0" target="_blank" rel="noopener noreferrer">{item.linkProject}</a></h4>
-          <p className="text-secondary">{item.period}</p>
           <p className="mb-2">{item.desc}</p>
           <ol className="list-unstyled mx-2">
             {item.descList.map((el: { desc: string }, index: number) => (
                 <li key={`${el.desc}-${index}`} className="fs-6">
-                  <BsDash /> <b>{el.desc}</b>: {el.desc}
+                  <BsDot /> {el.desc}
                 </li>
             ))}
           </ol>
@@ -116,31 +115,31 @@ const App = () => {
           <div className="m-4">
             <h3 className="d-flex align-items-center gap-2 mt-5">Technical Skills</h3>
             <hr className="mb-4 mt-0" />
-            <h3>Languages</h3>
+            <h4>Languages</h4>
             <ul className="list-unstyled mx-2">
               {programmingLanguages.map((s) => (
                   <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
               ))}
             </ul>
-            <h3>Frameworks & Libraries:</h3>
+            <h4>Frameworks & Libraries:</h4>
             <ul className="list-unstyled mx-2">
               {frameworks.map((s) => (
                   <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
               ))}
             </ul>
-            <h3>Backend & APIs:</h3>
+            <h4>Backend & APIs:</h4>
             <ul className="list-unstyled mx-2">
               {backend.map((s) => (
                   <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
               ))}
             </ul>
-            <h3>Tools & Platforms:</h3>
+            <h4>Tools & Platforms:</h4>
             <ul className="list-unstyled mx-2">
               {tools.map((s) => (
                   <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
               ))}
             </ul>
-            <h3>Other:</h3>
+            <h4>Other:</h4>
             <ul className="list-unstyled mx-2">
               {other.map((s) => (
                   <li key={s.name} className="mb-2 fs-5"><BsDot />{s.name}</li>
