@@ -7,7 +7,6 @@ export type ProjectBlockProps = {
 export interface ProjectItem {
     nameProject: string;
     linkProject?: string;
-    period: string;
     desc: string;
     descList: DescProject[] | DescWebsite[];
     tech: 'Technologies:',

@@ -69,8 +69,7 @@ export const descWebsites: DescWebsite[] = [
 export const projects: ProjectItem[] = [
     {
         nameProject: 'Time To Change – Financial Calculator Application',
-        linkProject: 'timetochange.work',
-        period: '2025',
+        linkProject: 'https://timetochange.work',
         desc: 'Full-stack web application:',
         descList: descProjects,
         tech: 'Technologies:',
@@ -83,8 +82,7 @@ export const projects: ProjectItem[] = [
 
     {
         nameProject: 'Portfolio Website',
-        linkProject: 'agnieszka.makowej.pro',
-        period: '2025',
+        linkProject: 'https://agnieszka.makowej.pro',
         desc: '',
         descList: descWebsites,
         tech: 'Technologies:',
@@ -98,13 +96,13 @@ export const experience: ExperienceItem[] = [
     {
         role: 'Software Developer',
         company: 'Polish Developer Network sp. z o.o.',
-        period: '2025 - present',
+        period: 'Jun 2025 - present',
         desc: 'Implementation of two projects as part of the internship: the Time To Change application - an interactive financial calculator and Portfolio (online CV).',
     },
     {
         role: 'Office Administrator',
         company: 'Polish Developer Network sp. z o.o.',
-        period: '2019 - 2024',
+        period: 'Dec 2019 - Dec 2024',
         desc: 'Office document management and digital archiving. Invoicing and preparation of accounting documents, cooperation with an accounting office. Planning and monitoring of the operating budget and making company payments.',
     },
     {
@@ -132,31 +130,31 @@ export const courses: CourseItem[] = [
     {
         name: 'Programming Foundations: Object-Oriented Design',
         company: 'LinkedIn Learning',
-        period: '03/2026',
+        period: 'Mar 2026',
         desc: '',
     },
     {
         name: 'Sekurak about security',
         company: 'Sekurak.pl',
-        period: '09/2025',
+        period: 'Sep 2025',
         desc: 'Key topics: basics of phishing defense, password leaks and security, the dark side of artificial intelligence and leaks, OSINT - information mining, two-factor authentication (2FA), smartphone security, the threat of ransomware.',
     },
     {
         name: 'Programming Foundations: Beyond the Fundamentals',
         company: 'LinkedIn Learning',
-        period: '07/2024',
+        period: 'Jul 2024',
         desc: 'Key topics: collections, iteration, using external code, working with strings, planning a program, input and output, debugging, object orientation.',
     },
     {
         name: 'HTML for Programmers',
         company: 'LinkedIn Learning',
-        period: '06/2024',
+        period: 'Jun 2024',
         desc: 'Key topics: HTML foundations, scaffolding an HTML Page, HTML with CSS and JavaScript.',
     },
     {
         name: 'Information Technologies Key Competencies Programme',
         company: 'European Information Technologies Certification Institute, ASBL.',
-        period: '01/2022',
+        period: 'Jan 2022',
         desc: 'Key topics: fundamentals of Information security and cryptography, computer programming, Computer-aided project management, databases and data engineering, office software.',
     },
 ];
@@ -164,7 +162,7 @@ export const courses: CourseItem[] = [
 export const education: EducationItem[] = [
     {
         degree: 'Master’s degree, Theology Studies',
-        school: 'Pontifical University of John Paul II in Krakow, Poland',
+        school: 'Pontifical University of John Paul II, Krakow, Poland',
         period: '2004 - 2009',
     },
 ];
