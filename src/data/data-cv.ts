@@ -168,6 +168,12 @@ export const descITKCP: string[] = [
 
 export const courses: CourseItem[] = [
     {
+        name: 'Career Essentials in Software Development by Microsoft and LinkedIn',
+        company: 'Microsoft & LinkedIn',
+        period: 'May 2026',
+        desc: [],
+    },
+    {
         name: 'Programming Foundations: Object-Oriented Design',
         company: 'LinkedIn Learning',
         period: 'Mar 2026',
